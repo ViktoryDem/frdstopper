@@ -10,22 +10,6 @@ window.addEventListener("load", function () {
   var docHeight = document.documentElement.scrollHeight;
   var winHeight = window.innerHeight;
 
-  //
-  let scrollY = 0;
-
-  function lockBodyScroll() {
-    scrollY = window.scrollY;
-    document.body.style.top = `-${scrollY}px`;
-    document.body.classList.add("lock-scroll");
-  }
-
-  function unlockBodyScroll() {
-    document.body.classList.remove("lock-scroll");
-    document.body.style.top = "";
-    window.scrollTo(0, scrollY);
-  }
-  //
-
   window.addEventListener("scroll", function (event) {
     isScrolling = true;
   });
@@ -51,16 +35,7 @@ window.addEventListener("load", function () {
       if (stickySidebar) {
         stickySidebar.classList.add("moveUp");
       }
-    }
-    //  else {
-    //   if (currentScrollPosition + winHeight < docHeight) {
-    //     header.classList.remove("header-hidden");
-    //     if (stickySidebar) {
-    //       stickySidebar.classList.remove("moveUp");
-    //     }
-    //   }
-    // }
-    else {
+    } else {
       header.classList.remove("header-hidden");
       if (stickySidebar) {
         stickySidebar.classList.remove("moveUp");
