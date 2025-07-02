@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <title>Masser af PLUSmedlem fordele med sparetips, svindel stopper og reklamefri spil</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+  <link href="https://plusmedlem.dk/css/style.css" rel="stylesheet" media="screen">
+  <link href="https://plusmedlem.dk/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="https://plusmedlem.dk/css/custom.css" rel="stylesheet" media="screen">
+  <link href="https://plusmedlem.dk/css/Glyphter.css" rel="stylesheet" media="screen">
+  <link href="https://plusmedlem.dk/css/jquery.countdown.css" rel="stylesheet" media="screen">
+  <link href="../css/menu-fixes.css" rel="stylesheet" media="screen">
+
+  <!-- <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/fraud-game.css"> -->
+
+
+
+  <link rel="icon" href="https://plusmedlem.dk/assets/plusmedlemdk/fav48.png" />
+  <link rel="shortcut icon" href="https://plusmedlem.dk/assets/plusmedlemdk/fav16.png" />
+
+
+  <meta property="og:url" content="https://plusmedlem.dk/home" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Masser af PLUSmedlem fordele med sparetips, svindel stopper og reklamefri spil" />
+  <meta property="og:description" content="Spil vores spil på PlusMedlem.dk og vind præmier." />
+  <meta property="og:image" content="https://plusmedlem.dk/assets/plusmedlemdk/ingamelogo.png" />
+
+
+
+
+
+  <script>
+    dataLayer = [{
+      'userID': '549333',
+    }];
+  </script>
+
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NRDPWS5');</script>
+  <!-- End Google Tag Manager -->
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+  <script src="//629c24ff5a464e9ea7872f9a230a7d7c.js.ubembed.com" async></script>
+
+
+
+
+  <script>
+
+    $(document).on('click', '#deleteFavoriteButton', function (event) {
+
+      event.preventDefault();
+
+      console.log("#deleteFavoriteButton");
+      console.log($(this).attr('gameid'));
+
+      deleteFavorite($(this).attr('gameid'));
+
+      $(this).text("Favorit slettet");
+
+    });
+
+    $(document).on('click', '#markFavoriteButton', function (event) {
+
+      event.preventDefault();
+
+      console.log("#markFavoriteButton");
+      console.log($(this).attr('gameid'));
+
+      markFavorite($(this).attr('gameid'));
+
+      $(this).text("Favorit tilføjet");
+
+    });
+
+    function markFavorite(gameID) {
+
+      $.get('/game/favorite/create/' + gameID);
+
+
+
+    }
+
+    function deleteFavorite(gameID) {
+
+      $.get('/game/favorite/delete/' + gameID);
+
+
+
+    }
+
+    // Facebook share in window
+    $(document).ready(function () {
+      $('.fb-share').click(function (e) {
+        e.preventDefault();
+        window.open($(this).attr('href'), 'fbShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+
+        $(this).hide();
+        $('#playagain').show();
+
+        return false;
+      });
+
+      $('.ad-click').click(function (e) {
+        e.preventDefault();
+        window.open($(this).attr('href'), 'fbShareWindow');
+
+        $('#resultad').hide();
+        $('#resultadearncredits').hide();
+
+        $('#resultadearncredits-playagain').show();
+
+        return false;
+      });
+
+
+    });
+
+  </script>
+
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '378209865978805');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=378209865978805&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+</head>
+
+<body>
+
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRDPWS5" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+
+  <header id="top-menu">
+    <div class="header-right  "></div>
+    <div class="container">
+      <div class="row">
+        <div class="logo">
+          <a href="https://plusmedlem.dk/home"><img src="https://plusmedlem.dk/assets/plusmedlemdk/logo.png"
+              class="img-responsive logo-img"></a>
+        </div>
+        <div class="money pull-right">
+
+
+        </div>
+
+
+        <nav class="navbar navbar-default">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="navbar-toggle__text">MENU</span>
+            </button>
+
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="none_width"><a href="https://plusmedlem.dk/home">Forsiden</a></li>
+
+              <li><a href="https://plusmedlem.dk/game">Spil</a></li>
+
+
+              <li><a href="https://plusmedlem.dk/plus/savemoney/home">Sparetips</a></li>
+              <li><a href="https://plusmedlem.dk/plus/fraudstopper/home">Svindel Stopper</a></li>
+              <li><a href="https://plusmedlem.dk/vouchers">Rabatkoder</a></li>
+
+
+
+
+
+
+
+
+
+              <li class="none_width"><a href="https://plusmedlem.dk/account">Din konto</a></li>
+              <li class="none_width"><a href="https://plusmedlem.dk/help">Hjælp</a></li>
+              <li class="none_width"><a href="https://plusmedlem.dk/upgrade">Features</a></li>
+              <li class="none_width"><a href="https://plusmedlem.dk/logout">Log ud</a></li>
+            </ul>
+          </div>
+        </nav>
+
+
+      </div>
+    </div>
+  </header>
+  <style type="texthttps://plusmedlem.dk/css">
+    @media (min-width: 1024px) {
+      header .logo {
+        margin-top: 18px !important;
+        height: 25px !important;
+      }
+    }
+  </style>
+
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3" id="hidden_block">
+
+          <div class="left_block">
+
+
+            <div class="photo_upload">
+              <a href="https://plusmedlem.dk/account_edit"><button class="p_upload_button"><i
+                    class="icon-photo-camera"></i><br>Tilføj dit profilbillede</button></a>
+            </div>
+
+
+            <a href="https://plusmedlem.dk/account">
+              <div class="user_name">Fdgdf</div>
+            </a>
+
+
+            <div class="points" id="left-menu-points"><a href="https://plusmedlem.dk/points">
+                <p>50 %</p>beskyttet imod svindel
+              </a></div>
+
+            <div class="games_played" id="left-menu-credits">
+              <p>93.150,00 kr.</p> kan spares årligt
+            </div>
+
+            <div class="games_played" id="left-menu-games-played">
+              <p>1</p>gange spillet
+            </div>
+
+            <div class="games_played" id="left-menu-games-played">
+              <p>0</p>rabatkoder
+            </div>
+
+
+
+          </div>
+        </div>
+        <div class="col-md-6">
+
+          <div class="main_center_block">
+
+
+            <h1><img src="https://plusmedlem.dk/assets/plusmedlemdk/heart-icon.png" alt="Photo"
+                class="embed-responsive-item" width="45" height="34">
+              <span>Velkommen tilbage Fdgdf!</span>
+            </h1>
+
+
+          </div>
+
+          <div class="special-feed">
+          </div>
+
+          <div class="game_block_main last_type">
+            <div class="wrap">
+              <div class="top_section_block">
+                <div class="left_part">
+                  <h3><img src="https://plusmedlem.dk/assets/plusmedlemdk/play-icon.png" alt="Photo">Reklamefri spil
+                  </h3>
+                </div>
+              </div>
+              <div class="mid_section_block">
+
+                Spil vores reklamefri quiz, puslespil og ordleg. Du kan spille hver dag, og uden du får reklamer.
+
+              </div>
+              <div class="group_buttons">
+                <a href="https://plusmedlem.dk/game"><button class="my_button pull-left">Alle spil</button></a>
+                <a href="https://plusmedlem.dk/game/popular/list"><button class="my_button pull-right">Populære
+                    spil</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="game_block_main last_type">
+            <div class="wrap">
+              <div class="top_section_block">
+                <div class="left_part">
+                  <h3><img src="https://plusmedlem.dk/assets/plusmedlemdk/savemoney-icon.png" alt="Photo">Spar masser af
+                    penge</h3>
+                </div>
+              </div>
+              <div class="mid_section_block">
+
+                Spar op til 93.150,00 kr. årligt ved at følge de forskellige sparetips.
+
+              </div>
+              <div class="group_buttons">
+                <a href="https://plusmedlem.dk/plus/savemoney/home"><button class="my_button pull-left">Se
+                    sparetips</button></a>
+                <a href="https://plusmedlem.dk/plus/savemoney/home"><button class="my_button pull-right">Spar
+                    mest</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="game_block_main last_type">
+            <div class="wrap">
+              <div class="top_section_block">
+                <div class="left_part">
+                  <h3><img src="https://plusmedlem.dk/assets/plusmedlemdk/fraudstopper-icon.png" alt="Photo">Beskyt dig
+                    mod svindel</h3>
+                </div>
+              </div>
+              <div class="mid_section_block">
+
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar
+                til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar
+                til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar
+                til dig
+                hjælpe dig.
+                Brug vores Svindel Stopper til at beskytte dig imod svindel. Vi har en række værktøjer klar til dig
+                hjælpe dig.
+
+
+              </div>
+              <div class="group_buttons">
+                <a href="https://plusmedlem.dk/plus/fraudstopper/home"><button class="my_button middle">Se svindel
+                    beskyttelse</button></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-3">
+
+          <div class="right_block">
+
+            <div class="main_block_right">
+              <h2>Mest populære spil</h2>
+
+
+
+              <div class="game_sample">
+                <a href="https://plusmedlem.dk/game/word/265">
+                  <img src="https://plusmedlem.dk/storage/gamesimages/q6PMgyjydGNMMFGpvUhIUVMSu5f9KaM8G2kO932n.png"
+                    alt="Foto" class="img-responsive"> <!-- Set from game when images have been added -->
+                  <span>Ordleg</span>
+                </a>
+              </div>
+
+
+            </div>
+
+            <div class="main_block_right">
+              <h2>Bedste sparetip</h2>
+
+
+
+              <div class="game_sample">
+                <a href="https://plusmedlem.dk/plus/savemoney/view/20">
+                  <img src="https://plusmedlem.dk/storage/plus/savemoney/17JV0rZcg7zueK8Ohb1bVezdgiT8NAUuVrPx6AEY.png"
+                    alt="Foto" class="img-responsive">
+                  <span>Isolere et gammelt hus bedre</span>
+                </a>
+              </div>
+
+
+            </div>
+
+            <div class="main_block_right">
+              <h2>Stop svindel</h2>
+
+              Husk at ....
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class=" ">
+    <div class="container">
+      <a href="#"><img src="https://plusmedlem.dk/assets/plusmedlemdk/logo.png" class="footer_logo"></a>
+      <div class="row hidden-xs hidden-sm">
+        <div class="col-md-6">
+
+
+        </div>
+        <div class="col-md-6">
+
+
+          <div class="bottom_right_footer">
+
+            <h3>Kundeservice</h3>
+
+            <p>Vi er klar til at hjælpe. Se vores <a href="http://sofaspil.zendesk.com">hjælpeside</a> for at finde
+              hjælp og endelig altid <a href="https://plusmedlem.dk/help">kontakt os</a>, hvis du har brug for hjælp.
+            </p>
+
+          </div>
+
+
+
+        </div>
+      </div>
+      <div class="row hidden-xs hidden-sm">
+        <p class="bottom_footer_text">
+
+
+          © 2025 PlusMedlem.dk | HiT Media ApS - Kidholm 12 - 9310 Vodskov - Danmark <br><br><a href="/help"
+            target="_blank">Hjælp</a> | Kundeservice: kontakt@plusmedlem.dk eller tlf. 61308861 | <a
+            href="https://plusmedlem.app/terms" target="_blank">Betingelser</a> | <a
+            href="https://plusmedlem.app/privacy" target="_blank">Privatlivspolitik</a><br><br>
+
+        <p>
+          <center><img src="https://plusmedlem.dk/img/pay/mobilepay.png" style="margin: 0px 10px"><img
+              src="https://plusmedlem.dk/img/pay/visa.png" style="margin: 0px 10px"><img
+              src="https://plusmedlem.dk/img/pay/mastercard.png" style="margin: 0px 10px"></center>
+        </p>
+
+
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/script.js"></script>
+
+  <script src="https://plusmedlem.dk/js/jquery-1.12.2.min.js"></script>
+  <script src="https://plusmedlem.dk/js/bootstrap.min.js"></script>
+  <script src="https://plusmedlem.dk/js/common.js"></script>
+  <script src="https://plusmedlem.dk/js/jquery.countdown.js"></script>
+  <script src="https://plusmedlem.dk/js/script.js"></script>
+  <script src="https://plusmedlem.dk/js/jquery.polartimer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+  <div id="fb-root"></div>
+
+
+</body>
+
+</html>
