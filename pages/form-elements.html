@@ -36,71 +36,87 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="vd-wrapper">
-      <div class="header__row">
-        <div class="aside">
+  <div class="page-wrapper">
+    <header class="header">
+      <div class="vd-wrapper">
+        <div class="header__row">
+          <div class="header__burger burger-btn">
+            <span class="burger-btn__line"></span>
+            <span class="burger-btn__line"></span>
+            <span class="burger-btn__line"></span>
+            <span class="burger-btn__text">Menu</span>
+          </div>
+
+          <nav class="header__menu">
+            <ul class="header__list">
+              <li><a class="header__link" href=" https://plusmedlem.dk/home">Forsiden</a></li>
+              <li><a class="header__link" href="https://plusmedlem.dk/game">Spil</a></li>
+              <li><a class="header__link" href="https://plusmedlem.dk/plus/savemoney/home">Sparetips</a></li>
+              <li><a class="header__link" href="https://plusmedlem.dk/plus/fraudstopper/home">Svindel Stopper</a></li>
+              <li><a class="header__link" href="https://plusmedlem.dk/vouchers">Rabatkoder</a></li>
+              <li><a class="header__link" href="https://plusmedlem.dk/account">Din konto</a></li>
+              <li><a class="header__link" href="https://plusmedlem.dk/help">Hjælp</a></li>
+              <li><a class="header__link" href="https://plusmedlem.dk/upgrade">Features</a></li>
+              <li><a class="header__link" href="https://plusmedlem.dk/logout">Log ud</a></li>
+            </ul>
+          </nav>
+
           <a href="#" class="header__logo">
             <img src="../img/logo.png" alt="logo">
           </a>
-        </div>
-        <div class="header__btns">
-          <a href="#" class="header__log-out">Log Out</a>
-        </div>
-        <div class="balance">
-          <img src="../img/icons/coins.svg" alt="balance">
-          <span>101</span>
+          <div class="header__btns">
+            <a href="#" class="header__log-out">Log Out</a>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-  <div class="vd-wrapper main-wrapper">
-    <div class="aside sidebar">
-      <div class="sidebar__sticky-content">
-        <div class="user-widget">
-          <div class="user-widget__photo">
-            <img src="../img/user-photo.jpg" alt="user">
-          </div>
-          <div class="user-widget__name">
-            <span>Jacob</span>
-            <button class="btn_edit-name">
-            </button>
-          </div>
-          <div class="user-widget__balance">
-            <div>Your Balance:</div>
-            <div class="balance">
-              <img src="../img/icons/coins.svg" alt="balance">
-              <span>1080</span>
+    </header>
+    <div class="vd-wrapper main-wrapper">
+      <div class="aside sidebar">
+        <div class="sidebar__sticky-content">
+          <div class="user-widget">
+            <div class="user-widget__photo">
+              <img src="../img/user-photo.jpg" alt="user">
+            </div>
+            <div class="user-widget__name">
+              <span>Jacob</span>
+              <button class="btn_edit-name">
+              </button>
+            </div>
+            <div class="user-widget__balance">
+              <div>Your Balance:</div>
+              <div class="balance">
+                <img src="../img/icons/coins.svg" alt="balance">
+                <span>1080</span>
+              </div>
+            </div>
+
+            <div class="user-widget__row">
+              <div class="user-widget-card">
+                <div class="user-widget-card__title">Credits</div>
+                <div class="user-widget-card__value">336</div>
+              </div>
+              <div class="user-widget-card">
+                <div class="user-widget-card__title">Spil</div>
+                <div class="user-widget-card__value">218</div>
+              </div>
             </div>
           </div>
 
-          <div class="user-widget__row">
-            <div class="user-widget-card">
-              <div class="user-widget-card__title">Credits</div>
-              <div class="user-widget-card__value">336</div>
-            </div>
-            <div class="user-widget-card">
-              <div class="user-widget-card__title">Spil</div>
-              <div class="user-widget-card__value">218</div>
-            </div>
-          </div>
-        </div>
+          <div class="toolbar">
+            <a href="#" class="toolbar-item active">
+              <div class="toolbar-item__icon toolbar-item__icon_games"></div>
+              <div class="toolbar-item__text"><span class="hide-on-mob">Alle</span> Spil</div>
+            </a>
+            <a href="#" class="toolbar-item">
+              <div class="toolbar-item__icon toolbar-item__icon_popular"></div>
+              <div class="toolbar-item__text">Populære</div>
+            </a>
+            <a href="#" class="toolbar-item">
+              <div class="toolbar-item__icon toolbar-item__icon_favorites"></div>
+              <div class="toolbar-item__text">Favoritter</div>
+            </a>
 
-        <div class="toolbar">
-          <a href="#" class="toolbar-item active">
-            <div class="toolbar-item__icon toolbar-item__icon_games"></div>
-            <div class="toolbar-item__text"><span class="hide-on-mob">Alle</span> Spil</div>
-          </a>
-          <a href="#" class="toolbar-item">
-            <div class="toolbar-item__icon toolbar-item__icon_popular"></div>
-            <div class="toolbar-item__text">Populære</div>
-          </a>
-          <a href="#" class="toolbar-item">
-            <div class="toolbar-item__icon toolbar-item__icon_favorites"></div>
-            <div class="toolbar-item__text">Favoritter</div>
-          </a>
-
-          <!-- <a href="#" class="toolbar-item">
+            <!-- <a href="#" class="toolbar-item">
 						<div class="toolbar-item__icon toolbar-item__icon_highscore"></div>
 						<div class="toolbar-item__text">Highscore</div>
 					</a>
@@ -108,193 +124,194 @@
 						<div class="toolbar-item__icon toolbar-item__icon_prizes"></div>
 						<div class="toolbar-item__text">Prizes</div>
 					</a> -->
-        </div>
-      </div>
-    </div>
-
-    <div class="main main_without-overflow">
-      <br>
-      <h2 class="txt-center form-text">
-        Form Element Variants
-      </h2>
-      <h3>Input</h3>
-      <input class="input" type="input" name="input-name" placeholder="Placeholder">
-
-      <br>
-      <br>
-      <h3>Input with label</h3>
-      <div class="form-group">
-        <label class="label" for="test-input">Input label</label>
-        <input class="input" id="test-input" type="input" name="test-input" placeholder="Your name">
-      </div>
-      <br>
-      <br>
-      <h3>Select box</h3>
-      <div style="max-width: 300px;">
-        <div class="form-group">
-          <label class="label">Please select the type of issue *</label>
-          <div class="custom-dropdown">
-            <div class="custom-dropdown__selected">Type of issue</div>
-            <div class="custom-dropdown__arrow icon-arrow-down">
-            </div>
-            <div class="custom-dropdown__options">
-              <div class="custom-dropdown__option">Option 1</div>
-              <div class="custom-dropdown__option">Option 2</div>
-              <div class="custom-dropdown__option">Option 3</div>
-            </div>
           </div>
         </div>
       </div>
 
-      <br>
-      <br>
-      <h3>Radio buttons</h3>
-      <div class="radio-group">
-        <input type="radio" id="opt1" name="choice" value="1" checked>
-        <label class="label" for="opt1">Option 1</label>
+      <div class="main main_without-overflow">
+        <br>
+        <h2 class="txt-center form-text">
+          Form Element Variants
+        </h2>
+        <h3>Input</h3>
+        <input class="input" type="input" name="input-name" placeholder="Placeholder">
 
-        <input type="radio" id="opt2" name="choice" value="2">
-        <label class="label" for="opt2">Option 2</label>
-
-        <input type="radio" id="opt3" name="choice" value="3">
-        <label class="label" for="opt3">Option 3</label>
-      </div>
-      <br>
-
-      <h3>Standart radio</h3>
-      <label class="label custom-radio">
-        <input type="radio" name="choice" value="1" checked>
-        <span class="radio-circle"></span>
-        Option 1
-      </label>
-
-      <label class="label custom-radio">
-        <input type="radio" name="choice" value="2">
-        <span class="radio-circle"></span>
-        Option 2
-      </label>
-
-      <label class="label custom-radio">
-        <input type="radio" name="choice" value="3">
-        <span class="radio-circle"></span>
-        Option 3
-      </label>
-
-
-      <h3>Checkbox</h3>
-      <label class="label custom-checkbox">
-        <input type="checkbox" name="agree" checked>
-        <span class="checkbox-box"></span>
-        I agree to the terms
-      </label>
-
-      <label class="label custom-checkbox">
-        <input type="checkbox" name="subscribe">
-        <span class="checkbox-box"></span>
-        Subscribe to newsletter
-      </label>
-
-      <br>
-
-      <h3>Buttons</h3>
-      <div class="technical-btn-row">
-        <button class="step-btn step-btn_prev step-btn_light">Button</button>
-        <button class="step-btn step-btn_next step-btn_light">Button</button>
-        <button class="step-btn step-btn_light">Button</button>
-      </div>
-      <div class="technical-btn-row">
-        <button class="step-btn step-btn_prev">Button</button>
-        <button class="step-btn step-btn_next">Button</button>
-        <button class="step-btn">Button</button>
-      </div>
-      <div class="technical-btn-row">
-        <button class="step-btn step-btn_accent step-btn_prev">Button</button>
-        <button class="step-btn step-btn_accent step-btn_next">Button</button>
-        <button class="step-btn step-btn_accent">Button</button>
-      </div>
-
-
-      <div class="line-divider"></div>
-      <h3>Form example</h3>
-      <form class="technical-example-form">
-        <div>
-          <div class="form-text">Your Info</div>
-          <label class="label" for="name">Your Name</label>
-          <input class="input" type="text" id="name" name="name" placeholder="Enter your name" style="width:100%;">
-        </div>
+        <br>
+        <br>
+        <h3>Input with label</h3>
         <div class="form-group">
-          <label class="label">Issue Type</label>
-          <div class="custom-dropdown">
-            <div class="custom-dropdown__selected">Type of issue</div>
-            <div class="custom-dropdown__arrow icon-arrow-down">
-            </div>
-            <div class="custom-dropdown__options">
-              <div class="custom-dropdown__option">Select an issue</div>
-              <div class="custom-dropdown__option">Login problem</div>
-              <div class="custom-dropdown__option">Payment issue</div>
-              <div class="custom-dropdown__option">Report a bug</div>
+          <label class="label" for="test-input">Input label</label>
+          <input class="input" id="test-input" type="input" name="test-input" placeholder="Your name">
+        </div>
+        <br>
+        <br>
+        <h3>Select box</h3>
+        <div style="max-width: 300px;">
+          <div class="form-group">
+            <label class="label">Please select the type of issue *</label>
+            <div class="custom-dropdown">
+              <div class="custom-dropdown__selected">Type of issue</div>
+              <div class="custom-dropdown__arrow icon-arrow-down">
+              </div>
+              <div class="custom-dropdown__options">
+                <div class="custom-dropdown__option">Option 1</div>
+                <div class="custom-dropdown__option">Option 2</div>
+                <div class="custom-dropdown__option">Option 3</div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div>
-          <div class="form-text">Select your plan</div>
+        <br>
+        <br>
+        <h3>Radio buttons</h3>
+        <div class="radio-group">
+          <input type="radio" id="opt1" name="choice" value="1" checked>
+          <label class="label" for="opt1">Option 1</label>
 
-          <label class="label custom-radio">
-            <input type="radio" name="plan" value="basic" checked>
-            <span class="radio-circle"></span>
-            Basic
-          </label>
+          <input type="radio" id="opt2" name="choice" value="2">
+          <label class="label" for="opt2">Option 2</label>
 
-          <label class="label custom-radio">
-            <input type="radio" name="plan" value="premium">
-            <span class="radio-circle"></span>
-            Premium
-          </label>
+          <input type="radio" id="opt3" name="choice" value="3">
+          <label class="label" for="opt3">Option 3</label>
+        </div>
+        <br>
 
-          <label class="label custom-radio">
-            <input type="radio" name="plan" value="pro">
-            <span class="radio-circle"></span>
-            Pro
-          </label>
+        <h3>Standart radio</h3>
+        <label class="label custom-radio">
+          <input type="radio" name="choice" value="1" checked>
+          <span class="radio-circle"></span>
+          Option 1
+        </label>
+
+        <label class="label custom-radio">
+          <input type="radio" name="choice" value="2">
+          <span class="radio-circle"></span>
+          Option 2
+        </label>
+
+        <label class="label custom-radio">
+          <input type="radio" name="choice" value="3">
+          <span class="radio-circle"></span>
+          Option 3
+        </label>
+
+
+        <h3>Checkbox</h3>
+        <label class="label custom-checkbox">
+          <input type="checkbox" name="agree" checked>
+          <span class="checkbox-box"></span>
+          I agree to the terms
+        </label>
+
+        <label class="label custom-checkbox">
+          <input type="checkbox" name="subscribe">
+          <span class="checkbox-box"></span>
+          Subscribe to newsletter
+        </label>
+
+        <br>
+
+        <h3>Buttons</h3>
+        <div class="technical-btn-row">
+          <button class="step-btn step-btn_prev step-btn_light">Button</button>
+          <button class="step-btn step-btn_next step-btn_light">Button</button>
+          <button class="step-btn step-btn_light">Button</button>
+        </div>
+        <div class="technical-btn-row">
+          <button class="step-btn step-btn_prev">Button</button>
+          <button class="step-btn step-btn_next">Button</button>
+          <button class="step-btn">Button</button>
+        </div>
+        <div class="technical-btn-row">
+          <button class="step-btn step-btn_accent step-btn_prev">Button</button>
+          <button class="step-btn step-btn_accent step-btn_next">Button</button>
+          <button class="step-btn step-btn_accent">Button</button>
         </div>
 
-        <div>
-          <div class="form-text">Preferences</div>
 
-          <label class="label custom-checkbox">
-            <input type="checkbox" name="newsletter" checked>
-            <span class="checkbox-box"></span>
-            Subscribe to newsletter
-          </label>
+        <div class="line-divider"></div>
+        <h3>Form example</h3>
+        <form class="technical-example-form">
+          <div>
+            <div class="form-text">Your Info</div>
+            <label class="label" for="name">Your Name</label>
+            <input class="input" type="text" id="name" name="name" placeholder="Enter your name" style="width:100%;">
+          </div>
+          <div class="form-group">
+            <label class="label">Issue Type</label>
+            <div class="custom-dropdown">
+              <div class="custom-dropdown__selected">Type of issue</div>
+              <div class="custom-dropdown__arrow icon-arrow-down">
+              </div>
+              <div class="custom-dropdown__options">
+                <div class="custom-dropdown__option">Select an issue</div>
+                <div class="custom-dropdown__option">Login problem</div>
+                <div class="custom-dropdown__option">Payment issue</div>
+                <div class="custom-dropdown__option">Report a bug</div>
+              </div>
+            </div>
+          </div>
 
-          <label class="label custom-checkbox">
-            <input type="checkbox" name="terms">
-            <span class="checkbox-box"></span>
-            Accept terms and conditions
-          </label>
-        </div>
-        <div> <button class="step-btn" type="submit">Submit</button>
-        </div>
-      </form>
+          <div>
+            <div class="form-text">Select your plan</div>
+
+            <label class="label custom-radio">
+              <input type="radio" name="plan" value="basic" checked>
+              <span class="radio-circle"></span>
+              Basic
+            </label>
+
+            <label class="label custom-radio">
+              <input type="radio" name="plan" value="premium">
+              <span class="radio-circle"></span>
+              Premium
+            </label>
+
+            <label class="label custom-radio">
+              <input type="radio" name="plan" value="pro">
+              <span class="radio-circle"></span>
+              Pro
+            </label>
+          </div>
+
+          <div>
+            <div class="form-text">Preferences</div>
+
+            <label class="label custom-checkbox">
+              <input type="checkbox" name="newsletter" checked>
+              <span class="checkbox-box"></span>
+              Subscribe to newsletter
+            </label>
+
+            <label class="label custom-checkbox">
+              <input type="checkbox" name="terms">
+              <span class="checkbox-box"></span>
+              Accept terms and conditions
+            </label>
+          </div>
+          <div> <button class="step-btn" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+
     </div>
+    <footer class="vd-footer">
+      <div class="vd-wrapper">
+        <div>
+          <a href="#" class="vd-footer__logo">
+            <img src="../img/logo.png" alt="logo">
+          </a>
+        </div>
+        <div class="vd-footer__text">
+          © 2025 PåskeSkrab.dk | HiT Media ApS - Kidholm 12 - 9310 Vodskov - Danmark | <a href="#" target="_blank">Hjælp
+            / Kundeservice</a> | <a href="#" target="_blank">Betingelser</a> | <a href="#"
+            target="_blank">Privatlivspolitik</a>
 
+        </div>
+      </div>
+    </footer>
   </div>
-  <footer class="vd-footer">
-    <div class="vd-wrapper">
-      <div>
-        <a href="#" class="vd-footer__logo">
-          <img src="../img/logo.png" alt="logo">
-        </a>
-      </div>
-      <div class="vd-footer__text">
-        © 2025 PåskeSkrab.dk | HiT Media ApS - Kidholm 12 - 9310 Vodskov - Danmark | <a href="#" target="_blank">Hjælp
-          / Kundeservice</a> | <a href="#" target="_blank">Betingelser</a> | <a href="#"
-          target="_blank">Privatlivspolitik</a>
-
-      </div>
-    </div>
-  </footer>
   <script src="../js/script.js"></script>
   <script src="../js/dropdown-script.js"></script>
 
