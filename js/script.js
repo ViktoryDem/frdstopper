@@ -44,7 +44,44 @@ window.addEventListener("load", function () {
     position = currentScrollPosition;
   }
 });
-
+///
+////
+let bodyLockStatus = true;
+let bodyUnlock = (delay = 500) => {
+  let wrapper = document.querySelector(".page-wrapper");
+  if (bodyLockStatus) {
+    let lock_padding = document.querySelectorAll("[data-lp]");
+    setTimeout(() => {
+      for (let index = 0; index < lock_padding.length; index++) {
+        const el = lock_padding[index];
+        el.style.paddingRight = "0px";
+      }
+      wrapper.style.paddingRight = "0px";
+      document.documentElement.classList.remove("lock");
+    }, delay);
+    bodyLockStatus = false;
+    setTimeout(function () {
+      bodyLockStatus = true;
+    }, delay);
+  }
+};
+let bodyLock = (delay = 500) => {
+  let wrapper = document.querySelector(".page-wrapper");
+  if (bodyLockStatus) {
+    // let lock_padding = document.querySelectorAll("[data-lp]");
+    // for (let index = 0; index < lock_padding.length; index++) {
+    //   const el = lock_padding[index];
+    //   el.style.paddingRight = window.innerWidth - wrapper.offsetWidth + "px";
+    // }
+    wrapper.style.paddingRight = window.innerWidth - wrapper.offsetWidth + "px";
+    document.documentElement.classList.add("lock");
+    bodyLockStatus = false;
+    setTimeout(function () {
+      bodyLockStatus = true;
+    }, delay);
+  }
+};
+///
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
@@ -52,5 +89,10 @@ window.onbeforeunload = function () {
 document.querySelector(".burger-btn").addEventListener("click", function () {
   this.classList.toggle("active");
   document.querySelector(".header__menu").classList.toggle("active");
-  document.querySelector("body").classList.toggle("lock");
+  // document.querySelector("body").classList.toggle("lock");
+  if (document.querySelector(".header__menu").classList.contains("active")) {
+    bodyLock(); // при открытии меню — блокируем скролл
+  } else {
+    bodyUnlock(); // при закрытии меню — разблокируем
+  }
 });

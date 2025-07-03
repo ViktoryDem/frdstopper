@@ -106,7 +106,6 @@ body {
 
 .header {
   box-shadow: 0 3px 9px 0 rgba(83, 42, 31, 0.1);
-  background: var(--header-bg-color);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -138,14 +137,29 @@ body {
   }
 }
 
+.lock body {
+  overflow: hidden;
+  touch-action: none;
+}
+
 .page-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
 
+.header:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--header-bg-color);
+  z-index: 2;
+}
 .header__burger {
   display: none;
+  -webkit-tap-highlight-color: transparent;
 }
 @media (max-width: 767.98px) {
   .header__burger {
@@ -157,6 +171,7 @@ body {
 
 .burger-btn {
   cursor: pointer;
+  z-index: 3;
 }
 .burger-btn__line {
   display: block;
@@ -187,6 +202,9 @@ body {
   bottom: 8px;
 }
 
+.header__logo {
+  z-index: 3;
+}
 @media (max-width: 767.98px) {
   .header__logo {
     margin-inline: 68px;
@@ -195,12 +213,13 @@ body {
 }
 
 .header__menu {
-  display: none;
   background: var(--header-bg-color);
   position: fixed;
   overflow: auto;
-  inset: 0;
   top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
   transition: all 0.3s ease 0s;
 }
 .header__list {
@@ -228,8 +247,12 @@ body {
 }
 
 .header__menu.active {
-  display: block;
-  top: 75px;
+  top: 0;
+  bottom: 0;
+}
+
+.header__btns {
+  z-index: 3;
 }
 
 .header__logo {
