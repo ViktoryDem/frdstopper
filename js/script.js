@@ -84,6 +84,18 @@ const toggleMenu = () => {
 
 document.querySelector(".burger-btn").addEventListener("click", toggleMenu);
 
+// Auto-close mobile menu on resize (e.g. phone rotated)
+window.addEventListener("resize", () => {
+  const burger = document.querySelector(".burger-btn");
+  const menu = document.querySelector(".header__menu");
+
+  if (window.innerWidth > 768 && menu.classList.contains("active")) {
+    burger.classList.remove("active");
+    menu.classList.remove("active");
+    bodyUnlock();
+  }
+});
+
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
